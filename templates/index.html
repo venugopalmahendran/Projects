@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>1000 IMAGE Predict</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    </head>
+    <body>
+        <video autoplay muted loop>
+            <source src="/static/images/backgroundvideo.mp4" type="video/mp4">
+        </video>
+        <div>
+            <h1 class="title">1000 IMAGE Predictor </h1>
+            
+        </div>
+        <a href="{{url_for('list')}}">train images list</a>
+        <div id="exampleimage">
+            <center>
+            <p id="result"></p>
+            </center>
+
+        </div>
+        <div>
+            <input type="file" id="inputfile" accept="image/*">
+            <button id="btn" onclick="uploadimage()">predict</button>
+        </div>
+        <script src="{{url_for('static',filename='js/script.js')}}"></script>
+    </body>
+</html>
